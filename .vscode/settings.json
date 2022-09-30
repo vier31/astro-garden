@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Quiet Light",
+  "editor.insertSpaces": true,
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
+}

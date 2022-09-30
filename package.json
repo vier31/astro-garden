@@ -2,6 +2,10 @@
   "name": "@example/basics",
   "version": "0.0.1",
   "private": true,
+  "volta": {
+    "node": "16.17.1",
+    "npm": "8.19.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,6 +14,7 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^0.11.3",
     "astro": "^1.0.1",
     "tailwindcss": "^3.1.8"
   },
