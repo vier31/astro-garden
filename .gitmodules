@@ -1,4 +1,0 @@
-[submodule "src/pages/notes"]
-	path = src/pages/notes
-	url = https://git.banauso.net/jan/notes-repo.git
-  branch = main-notes
