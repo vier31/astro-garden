@@ -1,6 +1,9 @@
 ---
 import '@fontsource/nunito'
 import '@fontsource/vollkorn'
+import '../styles/reset.css'
+
+import BodyLayout from './BodyLayout.astro';
 
 export interface Props {
 	title: string;
@@ -20,29 +23,21 @@ const { title } = Astro.props as Props;
 
 		<title>{title}</title>
 	</head>
-	<body>
-		<a class="title" href="/">{title}</a>
-		<div class="with-sidebar">
-			<nav class="navigation mb-10">
-				<ul>
-					<li><a href="/texts/">Texts</a></li>
-					<li><a href="/images/">Image</a></li>
-					<li><a href="/sounds/">Sound</a></li>
-					<li><a href="/code/">Code</a></li>
-				</ul>
-			</nav>
-			<article class="content">
-				<slot />
-			</article>
-		</div>
-	</body>
+	<BodyLayout>
+		<slot />
+	</BodyLayout>
 </html>
 
 <style>
 	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+	  --font-size-xs: clamp(0.69rem, calc(0.67rem + 0.12vw), 0.78rem);
+	  --font-size-s: clamp(0.83rem, calc(0.76rem + 0.39vw), 1.11rem);
+	  --font-size-base: clamp(1.00rem, calc(0.84rem + 0.80vw), 1.56rem);
+	  --font-size-m: clamp(1.20rem, calc(0.91rem + 1.44vw), 2.21rem);
+	  --font-size-ml: clamp(1.44rem, calc(0.96rem + 2.41vw), 3.12rem);
+	  --font-size-lg: clamp(1.73rem, calc(0.96rem + 3.84vw), 4.42rem);
+	  --font-size-xl: clamp(2.07rem, calc(0.88rem + 5.96vw), 6.25rem);
+	  --font-size-xxl: clamp(2.49rem, calc(0.68rem + 9.06vw), 8.83rem);
 
 		--color-text: hsl(12, 5%, 4%);
 		--color-bg: hsl(10, 21%, 95%);
@@ -50,7 +45,8 @@ const { title } = Astro.props as Props;
 	}
 
 	html {
-		padding: 2em 1em;
+		font-family: Nunito;
+		padding: 1em;
 		margin: auto;
 		font-size: var(--font-size-base);
 		color: var(--color-text);
@@ -65,6 +61,7 @@ const { title } = Astro.props as Props;
 	:global(h1) {
 		font-size: var(--font-size-xl);
     font-weight: bold;
+		margin: 2rem 0;
 	}
 
 	:global(h2) {
@@ -81,54 +78,8 @@ const { title } = Astro.props as Props;
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 
-	h1 {
-		margin: 2rem 0;
-	}
-
   img {
     margin: auto;
   }
-
-	.title {
-    font-size: var(--font-size-xl)
-  }
-
-	.with-sidebar {
-	  display: flex;
-	  flex-wrap: wrap;
-	  gap: 1ch;
-
-		align-items: flex-start;
-		justify-content: space-between;
-	}
-
-	.with-sidebar > :first-child {
-		flex-basis: 13rem;
-	  flex-grow: 1;
-	}
-
-	.with-sidebar > :last-child {
-	  flex-basis: 0;
-	  flex-grow: 999;
-	  min-inline-size: 75%;
-	}
-
-	.navigation {
-		background-color: var(--color-bg);
-		position: sticky;
-    top: 0;
-	}
-
-	.navigation > ul {
-		max-width: fit-content;
-		display: flex;
-		flex-wrap: wrap;
-		column-gap: 2ch;
-	}
-
-	.navigation > ul > li {
-		flex-grow: 1;
-		flex-basis: calc((15rem - 100%) * 999);
-		font-size: var(--font-size-lg);
-	}
+	
 </style>

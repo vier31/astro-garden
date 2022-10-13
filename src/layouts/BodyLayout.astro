@@ -1,0 +1,70 @@
+---
+
+---
+
+<body>
+  <a class="title" href="/">banauso studio</a>
+  <div class="with-sidebar">
+    <nav class="navigation">
+      <ul>
+        <li><a href="/texts/">Texts</a></li>
+        <li><a href="/images/">Image</a></li>
+        <li><a href="/sounds/">Sound</a></li>
+        <li><a href="/code/">Code</a></li>
+      </ul>
+    </nav>
+    <article class="content">
+      <slot />
+    </article>
+  </div>
+</body>
+
+<style>
+  .title {
+    font-size: var(--font-size-m);
+		font-weight: bold;
+  }
+
+	.with-sidebar {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 1rem;
+
+		align-items: flex-start;
+	}
+
+	.with-sidebar > :first-child {
+		flex-basis: 13rem;
+	  flex-grow: 1;
+	}
+
+	.with-sidebar > :last-child {
+	  flex-basis: 0;
+	  flex-grow: 999;
+	  min-inline-size: 75%;
+	}
+
+	.content {
+		max-width: 60ch;
+	}
+
+	.navigation {
+		background-color: var(--color-bg);
+		position: sticky;
+    top: 0;
+	}
+
+	.navigation > ul {
+		max-width: fit-content;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 2ch;
+		margin: 1rem 0;
+	}
+
+	.navigation > ul > li {
+		flex-grow: 1;
+		flex-basis: calc((15rem - 100%) * 999);
+		font-size: var(--font-size-base);
+	}
+</style>
