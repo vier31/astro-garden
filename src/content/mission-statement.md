@@ -39,7 +39,7 @@ Without the overhead of the drugs and the avoidance of emotions. While I do feel
 
 There is this quote from DJ Shadow in the Scratch documentary, where he stands in this basement full of records and talks about being humbled by all these people who contributed to these piles. So, is it really worth it to want to contribute one more? Or two? I guess the same goes for images and texts. after laying in bed awake and now being up at 3:24 a.m. to write these lines, my conclusion is yes. Yes it is worth it and I won't let myself stop me from pursuing this.
 
-<h3>Images</h3>
+### Images
 
 I already mentioned it here and there. I am interested in image creation. Drawing also. The big chunk of learning that is starring my down is the draw-a-box course, which I find highly intriguing. One thing to do with this space here is collect and archive my past achievements. There were some okay things in there.
 
