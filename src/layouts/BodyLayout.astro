@@ -3,10 +3,10 @@
 ---
 
 <body>
-  <a class="title" href="/">banauso studio</a>
+ 	<a class="title" href="/">banauso studio</a>
   <div class="with-sidebar">
     <nav class="navigation">
-      <ul>
+      <ul role="list">
         <li><a href="/texts/">Texts</a></li>
         <li><a href="/images/">Image</a></li>
         <li><a href="/sounds/">Sound</a></li>
@@ -34,7 +34,7 @@
 	}
 
 	.with-sidebar > :first-child {
-		flex-basis: 13rem;
+		flex-basis: 12rem;
 	  flex-grow: 1;
 	}
 
@@ -45,7 +45,9 @@
 	}
 
 	.content {
-		max-width: 60ch;
+		/*max-height: 50rem;*/
+		column-width: 35ch;
+		column-gap: 5rem;
 	}
 
 	.navigation {

@@ -1,0 +1,26 @@
+h1 {
+	font-size: var(--font-size-xl);
+    font-weight: bold;
+	margin: 2rem 0;
+}
+
+h2 {
+	font-size: var(--font-size-ml);
+    font-weight: bold;
+}
+
+p {
+	font-family: Vollkorn;
+	max-width: 60ch;
+	margin-top: 1rem;
+}
+
+code {
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+	Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+a {
+	text-decoration: none;
+	color:  inherit;
+}
