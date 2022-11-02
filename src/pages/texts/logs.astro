@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/RootLayout.astro';
+
+const logBook = await Astro.glob('../../content/logs/*.md')
+const logBookContents = logBook.map(entry => entry.Content)
+
+---
+
+<Layout title="banauso texts">
+	<main>
+    {logBookContents.map(Content => (
+    	<article>
+    		<Content />
+  		</article>
+    	))}
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		margin: 2rem 0;
+	}
+
+  img {
+    margin: auto;
+  }
+</style>

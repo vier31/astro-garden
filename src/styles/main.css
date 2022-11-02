@@ -1,19 +1,27 @@
 h1 {
 	font-size: var(--font-size-xl);
     font-weight: bold;
-	margin: 2rem 0;
+	margin-top:  2em;
 }
 
 h2 {
 	font-size: var(--font-size-ml);
     font-weight: bold;
+    margin-top:  0.5em;
+}
+
+h3 {
+	font-size: var(--font-size-m);
+	font-weight: bold;
+	margin-top: 0.5em;
 }
 
 p {
 	font-family: Vollkorn;
 	max-width: 60ch;
-	margin-top: 1rem;
+	margin-top: 0.3em;
 }
+
 
 code {
 	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

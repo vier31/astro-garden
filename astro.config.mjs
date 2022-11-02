@@ -7,5 +7,9 @@ import serviceWorker from "astrojs-service-worker";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [serviceWorker(), mdx(), vue()]
+  integrations: [
+    serviceWorker(), 
+    mdx(),
+    vue()
+  ],
 });

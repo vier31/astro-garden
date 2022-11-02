@@ -24,6 +24,7 @@
   "dependencies": {
     "@fontsource/nunito": "^4.5.10",
     "@fontsource/vollkorn": "^4.5.12",
+    "@vimeo/player": "^2.18.0",
     "astro-icon": "^0.7.3",
     "astrojs-service-worker": "^0.0.8"
   }
